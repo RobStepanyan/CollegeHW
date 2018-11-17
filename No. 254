@@ -1,0 +1,25 @@
+'No. 254
+Private Sub Command4_Click()
+Dim x() As Integer
+n = Val(InputBox("N: "))
+ReDim x(1 To n) As Integer
+List1.Clear
+Text1.Text = ""
+Max = -100
+Min = 100
+For i = 1 To n
+'Generate array
+x(i) = Rnd * 200 - 100
+List1.AddItem "x(" & i & ")=" & x(i)
+'Find max & min
+If x(i) > Max Then
+Mi = i
+Max = x(i)
+End If
+If x(i) < Min Then
+Mi = i
+Min = x(i)
+End If
+Next
+Text1.Text = "Max * Min = " & Max * Min
+End Sub
