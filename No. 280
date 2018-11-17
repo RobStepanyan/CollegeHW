@@ -1,0 +1,28 @@
+'No. 280
+Private Sub Command30_Click()
+Dim x() As String
+Dim y() As String
+n = Val(InputBox("N: "))
+ReDim x(1 To n) As String
+ReDim y(1 To 2 * n) As String
+List1.Clear
+List2.Clear
+Text1.Text = ""
+For i = 1 To n
+x(i) = Chr(65 + Rnd * 25)
+List1.AddItem "x(" & i & ")=" & x(i)
+j = i
+If x(i) <> "F" Then
+y(j + m) = x(i)
+Else
+
+y(j + m) = "F"
+y(j + m + 1) = "F"
+m = m + 1
+End If
+Next
+'ReDim y(1 To n + m) As String
+For i = 1 To n + m
+List2.AddItem "y(" & i & ")=" & y(i)
+Next
+End Sub
