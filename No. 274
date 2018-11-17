@@ -1,0 +1,17 @@
+'No. 274
+Private Sub Command24_Click()
+Dim x() As String
+n = Val(InputBox("N: "))
+ReDim x(1 To n) As String
+List1.Clear
+Text1.Text = ""
+For i = 1 To n
+x(i) = Chr(65 + Rnd * 25)
+List1.AddItem "x(" & i & ")=" & x(i)
+If x(i) > "H" Then
+s = s + i
+q = q + 1
+End If
+Next
+Text1.Text = "= " & s / q
+End Sub
