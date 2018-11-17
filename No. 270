@@ -1,0 +1,19 @@
+'No. 270
+Private Sub Command20_Click()
+Dim x() As Integer
+Dim y() As Integer
+n = Val(InputBox("N: "))
+ReDim x(1 To n) As Integer
+ReDim y(1 To n) As Integer
+List1.Clear
+List2.Clear
+Text1.Text = ""
+For i = 1 To n
+x(i) = Rnd * 200 - 100
+List1.AddItem "x(" & i & ")=" & x(i)
+y(i) = Rnd * 200 - 100
+List2.AddItem "y(" & i & ")=" & y(i)
+s = s + x(i) ^ 2 + y(i) ^ 2
+Next
+Text1.Text = "= " & s
+End Sub
