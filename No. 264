@@ -1,0 +1,26 @@
+'No. 264
+Private Sub Command14_Click()
+Dim x() As Integer
+Dim y() As Integer
+List1.Clear
+List2.Clear
+Text1.Text = ""
+n = Val(InputBox("N: "))
+If n <> 0 Then
+ReDim x(1 To n) As Integer
+ReDim y(1 To n) As Integer
+For i = 1 To n
+x(i) = Rnd * 200 - 100
+List1.AddItem "x(" & i & ")=" & x(i)
+If x(i) < 0 Then
+b = b + 1
+End If
+y(i) = Rnd * 200 - 100
+If y(i) < 0 Then
+b = b + 1
+End If
+List2.AddItem "y(" & i & ")=" & y(i)
+Next
+Text1.Text = "Bc Qan: " & b
+End If
+End Sub
