@@ -1,0 +1,24 @@
+'No. 262
+Private Sub Command12_Click()
+Dim x() As Integer
+Dim y() As Integer
+List1.Clear
+List2.Clear
+Text1.Text = ""
+n = Val(InputBox("N: "))
+If n <> 0 Then
+ReDim x(1 To n) As Integer
+ReDim y(1 To n) As Integer
+xsum = 0
+ysum = 0
+For i = 1 To n
+x(i) = Rnd * 200 - 100
+xsum = xsum + x(i) ^ 2
+List1.AddItem "x(" & i & ")=" & x(i)
+y(i) = Rnd * 200 - 100
+ysum = ysum + y(i) ^ 2
+List2.AddItem "y(" & i & ")=" & y(i)
+Next
+Text1.Text = "= " & Sqr((xsum / n) * (ysum / n))
+End If
+End Sub
