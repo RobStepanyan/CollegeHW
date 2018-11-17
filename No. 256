@@ -1,0 +1,19 @@
+'No. 256
+Private Sub Command6_Click()
+Dim x() As Integer
+n = Val(InputBox("N: "))
+ReDim x(1 To n) As Integer
+List1.Clear
+Text1.Text = ""
+Min = 100
+For i = 1 To n
+'Generate array
+x(i) = Rnd * 200 - 100
+List1.AddItem "x(" & i & ")=" & x(i)
+'Find Min + index of Min
+If x(i) < Min Then
+Min = x(i) + i
+End If
+Next
+Text1.Text = "Min + index = " & Min
+End Sub
