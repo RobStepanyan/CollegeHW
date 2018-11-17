@@ -1,0 +1,20 @@
+'No. 272
+Private Sub Command22_Click()
+Dim x() As String
+n = Val(InputBox("N: "))
+ReDim x(1 To n) As String
+List1.Clear
+Text1.Text = ""
+For i = 1 To n
+x(i) = Chr(65 + Rnd * 25)
+List1.AddItem "x(" & i & ")=" & x(i)
+If x(i) = "B" Then
+q = q + 1
+End If
+Next
+If q >= n / 2 Then
+Text1.Text = "t= " & True
+Else
+Text1.Text = "t= " & False
+End If
+End Sub
