@@ -1,0 +1,19 @@
+'No. 278
+Private Sub Command28_Click()
+Dim x() As String
+Dim y() As String
+n = Val(InputBox("N: "))
+ReDim x(1 To n) As String
+List1.Clear
+List2.Clear
+Text1.Text = ""
+For i = 1 To n
+x(i) = Chr(65 + Rnd * 25)
+List1.AddItem "x(" & i & ")=" & x(i)
+Next
+ReDim y(1 To Round(n / 2)) As String
+For i = 1 To Round(n / 2)
+y(i) = x(i * 2 - 1)
+List2.AddItem "y(" & i & ")=" & y(i)
+Next
+End Sub
