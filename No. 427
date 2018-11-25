@@ -1,0 +1,26 @@
+'No. 427
+Private Sub Command1_Click()
+Dim x() As Integer
+m = Val(InputBox("M: "))
+k = Val(InputBox("K: "))
+Pic1.Scale (0, 0)-(m + 1, m + 1)
+ReDim x(1 To m, 1 To m) As Integer
+Pic1.Cls
+s = 1
+For i = 1 To m
+For j = 1 To m
+x(i, j) = Rnd * 100
+Pic1.CurrentX = j
+Pic1.CurrentY = i
+Pic1.Print x(i, j)
+If i + j <= m + 1 And x(i, j) Mod k = 0 Then
+s = s * x(i, j)
+End If
+Next
+Next
+If s <> 1 Then
+MsgBox "Summary: " & s
+Else
+MsgBox "Summary: 0"
+End If
+End Sub
