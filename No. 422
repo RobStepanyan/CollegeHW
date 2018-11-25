@@ -2,7 +2,6 @@
 Private Sub Command1_Click()
 Dim x() As Integer
 m = Val(InputBox("M: "))
-k = Val(InputBox("K: "))
 Pic1.Scale (0, 0)-(m + 1, m + 1)
 ReDim x(1 To m, 1 To m) As Integer
 Pic1.Cls
