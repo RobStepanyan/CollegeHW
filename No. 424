@@ -19,8 +19,8 @@ End If
 Next
 Next
 If q <> 0 Then
-MsgBox "Root mean square: " & s / q
+MsgBox "Mean: " & s / q
 Else
-MsgBox "Root mean square: 0"
+MsgBox "Mean: 0"
 End If
 End Sub
