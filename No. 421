@@ -1,0 +1,22 @@
+'No. 421
+Private Sub Command1_Click()
+Dim x() As Integer
+m = Val(InputBox("M: "))
+k = Val(InputBox("K: "))
+Pic1.Scale (0, 0)-(m + 1, m + 1)
+ReDim x(1 To m, 1 To m) As Integer
+Pic1.Cls
+q = 0
+For i = 1 To m
+For j = 1 To m
+x(i, j) = Rnd * 100
+Pic1.CurrentX = j
+Pic1.CurrentY = i
+Pic1.Print x(i, j)
+If i > j And x(i, j) Mod k = 0 Then
+q = q + 1
+End If
+Next
+Next
+MsgBox "Quanity: " & q
+End Sub
