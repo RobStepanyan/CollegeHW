@@ -1,0 +1,27 @@
+'No. 436
+Private Sub Command1_Click()
+Dim x() As Integer
+n = Val(InputBox("N: "))
+a = Val(InputBox("A: "))
+b = Val(InputBox("B: "))
+Pic1.Scale (0, 0)-(n + 1, n + 1)
+ReDim x(1 To n, 1 To n) As Integer
+Pic1.Cls
+For i = 1 To n
+For j = 1 To n
+x(i, j) = Rnd * 100
+Pic1.CurrentX = j
+Pic1.CurrentY = i
+Pic1.Print x(i, j)
+If i > j And x(i, j) >= a And x(i, j) <= b Then
+q = q + 1
+s = s + x(i, j)
+End If
+Next
+Next
+If q <> 0 Then
+MsgBox "Mean: " & s / q
+Else
+MsgBox "Mean: 0"
+End If
+End Sub
