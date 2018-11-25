@@ -1,4 +1,4 @@
-'No. 231
+'No. 431
 Private Sub Command1_Click()
 Dim x() As Integer
 n = Val(InputBox("N: "))
