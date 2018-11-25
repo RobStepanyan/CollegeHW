@@ -1,0 +1,26 @@
+'No. 437
+Private Sub Command1_Click()
+Dim x() As Integer
+n = Val(InputBox("N: "))
+Pic1.Scale (0, 0)-(n + 1, n + 1)
+ReDim x(1 To n, 1 To n) As Integer
+Pic1.Cls
+For i = 1 To n
+For j = 1 To n
+x(i, j) = Rnd * 100
+Pic1.CurrentX = j
+Pic1.CurrentY = i
+Pic1.Print x(i, j)
+If i >= j And Round(x(i, j)) <> x(i, j) Then
+q = q + 1
+s = s + x(i, j) ^ 2
+End If
+Next
+Next
+If q <> 0 Then
+MsgBox "Root mean square: " & Sqr(s / q)
+Else
+MsgBox "Root mean square: 0"
+End If
+End Sub
+
