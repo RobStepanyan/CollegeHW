@@ -1,3 +1,4 @@
+'Sort matrice by columns and rows
 Private Sub Command1_Click()
 Dim x() As Integer
 Dim y() As Integer
