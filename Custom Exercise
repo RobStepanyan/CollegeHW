@@ -1,0 +1,57 @@
+Private Sub Command1_Click()
+Dim x() As Integer
+Dim y() As Integer
+n = Val(InputBox("N: "))
+Pic1.Scale (0, 0)-(n + 1, n + 1)
+Pic2.Scale (0, 0)-(n + 1, n + 1)
+Pic1.Cls
+Pic2.Cls
+ReDim x(1 To n, 1 To n)
+ReDim y(1 To n, 1 To n)
+
+'Pic1 Values &  Print
+For i = 1 To n
+For j = 1 To n
+x(i, j) = Rnd * 100 + 1
+y(i, j) = x(i, j)
+Pic1.CurrentX = j
+Pic1.CurrentY = i
+Pic1.Print x(i, j)
+Next
+Next
+
+'Pic2 Columns Sort
+For tox = 1 To n
+For j = 1 To n
+For jh = j + 1 To n
+If y(tox, j) > y(tox, jh) Then
+k = y(tox, j)
+y(tox, j) = y(tox, jh)
+y(tox, jh) = k
+End If
+Next
+Next
+Next
+
+'Pic2 Row Sort
+For i = 1 To n
+For ii = i + 1 To n
+If y(i, 1) > y(ii, 1) Then
+For j = 1 To n
+k = y(i, j)
+y(i, j) = y(ii, j)
+y(ii, j) = k
+Next
+End If
+Next
+Next
+
+'Pic2 Print
+For i = 1 To n
+For j = 1 To n
+Pic2.CurrentX = j
+Pic2.CurrentY = i
+Pic2.Print y(i, j)
+Next
+Next
+End Sub
