@@ -1,0 +1,38 @@
+'No. 502
+
+Private Sub Command1_Click()
+Dim x() As Integer
+Dim b() As Integer
+n = Val(InputBox("N: "))
+Pic1.Scale (0, 0)-(n + 1, n + 1)
+Pic1.Cls
+ReDim x(1 To n, 1 To n)
+ReDim b(1 To n)
+For i = 1 To n
+For j = 1 To n
+x(i, j) = Rnd * 100 + 1
+Pic1.CurrentX = j
+Pic1.CurrentY = i
+Pic1.Print x(i, j)
+Next
+Next
+For i = 1 To n
+Max = 1
+kent = False
+For j = 1 To n
+If x(i, j) > Max And x(i, j) Mod 2 = 1 Then
+Max = x(i, j)
+End If
+If x(i, j) Mod 2 = 1 Then
+kent = True
+End If
+Next
+'Ete kent tiv chka b(i) = 0
+If kent = False Then
+b(i) = 0
+Else
+b(i) = Max
+End If
+List1.AddItem b(i)
+Next
+End Sub
