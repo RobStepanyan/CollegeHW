@@ -113,7 +113,7 @@ End If
 End If
 
 
-
+text1.text = (n^2+1)/2*n
 Pic1.Cls
 'Drawing lines & elements
 For i = 1 To n
