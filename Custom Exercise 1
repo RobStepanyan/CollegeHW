@@ -1,0 +1,61 @@
+'aj verev
+
+Private Sub Command1_Click()
+Dim x() As Integer
+n = Val(InputBox("N: "))
+ReDim x(1 To n, 1 To n)
+Pic1.Scale (0, 0)-(n, n)
+Pic1.FontSize = 50
+Pic1.Cls
+'Drawing lines
+For i = 1 To n
+Pic1.Line (0, i)-(n, i)
+Pic1.Line (i, 0)-(i, n)
+Next
+
+For i = 1 To n
+For j = 1 To n
+x(i, j) = 0
+Next
+Next
+tb = Val(InputBox("Yntrel tarberaky (1 kam 2 kam 3)"))
+
+If tb = 1 Then
+i = 1
+j = n / 2 + 0.5
+For tiv = 1 To n ^ 2
+x(i, j) = tiv
+ii = i
+jj = j
+i = i - 1
+j = j + 1
+If j > n Then
+j = 1
+End If
+If i = 0 Then
+i = n
+End If
+If x(i, j) <> 0 Then
+i = ii + 1
+j = jj
+End If
+
+Next
+End If
+
+
+
+Pic1.Cls
+'Drawing lines & elements
+For i = 1 To n
+Pic1.Line (0, i)-(n, i)
+Pic1.Line (i, 0)-(i, n)
+Next
+For i = 1 To n
+For j = 1 To n
+Pic1.CurrentX = j - 1
+Pic1.CurrentY = i - 1
+Pic1.Print x(i, j)
+Next
+Next
+End Sub
