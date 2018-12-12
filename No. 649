@@ -2,7 +2,6 @@
 
 Dim x() As Variant
 k = Text1.Text
-q = 0
 If k = "" Then
 MsgBox "Datark e"
 Exit Sub
