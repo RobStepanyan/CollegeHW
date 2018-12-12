@@ -7,4 +7,4 @@ If k = "" Then
 MsgBox "Datark e"
 Exit Sub
 End If
-Text2.Text = StrReverse(k)
+  Text2.Text = StrReverse(k) 
