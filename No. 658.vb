@@ -9,4 +9,4 @@ l = Len(k)
 Text2.Text = ""
 For i = 1 To l Step 2
 Text2.Text = Text2.Text & Mid(k, i + 1, 1) & Mid(k, i, 1)
-Next
+Next 
