@@ -12,4 +12,4 @@ j = j + 1
 Next
 If j <> Len(x) + 1 Then
 Text2.Text = Text2.Text & Mid(x, Len(x), 1)
-End If
+End If 
