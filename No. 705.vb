@@ -13,7 +13,6 @@ If z(i) <> "" Then
 j = j + 1
 k(j) = z(i)
 q = q + 1
-List2.AddItem k(j)
 End If
 Next
 s = 0
