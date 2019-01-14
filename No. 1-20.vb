@@ -69,7 +69,7 @@ lst1.additem "Xnd8: " & z
 '10
 x = val(inputbox("x = ")
 y = val(inputbox("y = ")
-z = sin(3.14/12+x)*cos((y+z)/(3.14+z^2))+exp(z+4)
+z = sin(3.14/(12+x))*cos((y+z)/(3.14+z^2))+exp(z+4)
 
 lst1.additem "Xnd10: " & z 
 
