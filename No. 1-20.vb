@@ -26,7 +26,7 @@ lst1.additem "Xnd3: " & z
 '4
 x = val(inputbox("x = ")
 y = val(inputbox("y = ")
-z = ln(exp(x)+1)+(x^2+4)/(1/3)
+z = ln(exp(x)+1)+(x^2+4)^(1/3)
 
 lst1.additem "Xnd4: " & z 
 
@@ -54,7 +54,7 @@ lst1.additem "Xnd7: " & z
 '8
 x = val(inputbox("x = ")
 y = val(inputbox("y = ")
-z = (x^2+((y^2+4)/(1/3))/(1/4))+(abs(x)+abs(y))^10
+z = (x^2+((y^2+4)^(1/3))^(1/4))+(abs(x)+abs(y))^10
 
 lst1.additem "Xnd8: " & z
 
@@ -151,7 +151,7 @@ a = val(inputbox("a= ")
 if abs(a) > 3 then
 y = sin(abs(x+a)^2)+ cos(x^2)^2
 else 
-y = (a^2+x^2)/(1/4)*log(a^2+x^4)/log(2)
+y = (a^2+x^2)^(1/4)*log(a^2+x^4)/log(2)
 end if 
 lst1.additem Xnd16: " & y 
 
