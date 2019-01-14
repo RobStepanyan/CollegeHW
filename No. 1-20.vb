@@ -107,7 +107,7 @@ lst1.additem "Xnd12: " & y
 a = Val(InputBox("a="))
 b = Val(InputBox("b="))
 If a + Abs(b) < -5 Then
-Exp (a + x) * Cos(a + x + b) ^ 2
+y = Exp (a + x) * Cos(a + x + b) ^ 2
 Else
 If a + Abs(b) > 2 Then
 y = (Atn(a + x)) ^ (1 / 3)
