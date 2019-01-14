@@ -134,7 +134,7 @@ a = Val(InputBox("a="))
 b = Val(InputBox("b="))
 c = Val(InputBox("c="))
 x = Val(InputBox("x="))
-If -1 < c < 1 Then
+If -1 < c and c< 1 Then
 y = b + Tan(c + a) ^ 5
 Else
 If c <= -1 Then
