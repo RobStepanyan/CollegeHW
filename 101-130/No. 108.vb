@@ -1,5 +1,6 @@
 '108
 n = Val(InputBox("N: "))
+s = 1 
 x = 1
 y = 1
 For i = n To 2 * n
