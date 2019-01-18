@@ -1,4 +1,4 @@
-'142
+'142 
 a = Val(InputBox("A: "))
 For k = 1 To 9
 For m = 1 To 5
