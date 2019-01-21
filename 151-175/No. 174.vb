@@ -1,4 +1,5 @@
 '174
+lst.clear
 n = Val(InputBox("N: "))
 x = 2
 For k = 1 To n
