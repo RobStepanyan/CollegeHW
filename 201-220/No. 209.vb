@@ -1,7 +1,7 @@
 '209
 n = Val(InputBox("N: "))
 t = False
-Do While n > 9
+Do While n <>0
 If n Mod 10 Mod 2 = 1 Then
 t = True
 End If
