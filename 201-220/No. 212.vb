@@ -1,7 +1,7 @@
 '212
 x = Array(1, 2, 3, 4, 5)
 For i = 0 To UBound(x)
-If x(i) Mod 2 = 0 Then
+If x(i) > 0 Then
 s = s + x(i) ^ 2
 q = q + 1
 End If
