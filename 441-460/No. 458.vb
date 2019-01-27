@@ -1,5 +1,4 @@
-
-'No 451
+'No 458
 Dim x() As Integer
 n = Val(InputBox("N: "))
 k = Val(InputBox("K: "))
