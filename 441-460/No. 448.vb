@@ -11,7 +11,7 @@ Pic1.CurrentX = j
 Pic1.CurrentY = i
 Pic1.Print x(i, j)
 
-If i+j <=n And (i+j) mod 2= 0 Then
+If j >= i And (i+j) mod 2= 0 Then
 s = s + x(i, j)
 q = q +1
 End If
