@@ -19,8 +19,7 @@ Next
 Min = x(1, 1)
 For i = 1 To n
 For j = 1 To n
-If i >= i Then
-If x(i, j) < Min Then
+If i>=j abd x(i, j) < Min Then
 Min = x(i, j)
 End If
 End If
