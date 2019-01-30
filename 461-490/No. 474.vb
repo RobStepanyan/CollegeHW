@@ -20,11 +20,12 @@ Min = x(1, 1)
 For i = 1 To n
 For j = 1 To n
 If j > i And x(i, j) < Min Then
-Min = i * j
+Min = x(i,j)
+m = i * j
 End If
 End If
 Next
 Next
-lst.AddItem Min
+lst.AddItem m
 
 '---------------------------
