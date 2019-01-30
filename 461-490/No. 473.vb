@@ -20,11 +20,12 @@ Max = x(1, 1)
 For i = 1 To n
 For j = 1 To n
 If i > j And x(i, j) > Max Then
-Max = i + j
+Max = x(i, j)
+m = i + j
 End If
 End If
 Next
 Next
-lst.AddItem Max
+lst.AddItem m
 
 '---------------------------
