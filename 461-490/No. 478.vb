@@ -22,4 +22,5 @@ If x(i, n + 1 - i) > Max Then
 Max = x(i, n + 1 - i)
 End If
 Next
+lst.AddItem Max
 '---------------------------
