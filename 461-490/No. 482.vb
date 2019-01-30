@@ -17,5 +17,7 @@ p1.Print x(i, j)
 If x(i, j) > 0 Then
 s = s * x(i, j)
 End If
+Next
+Next
 lst.AddItem s
 '---------------------------
